@@ -1,5 +1,5 @@
 # TechAspectCodeathon4 placement
-##Code is written in python using Flask micro framework, and jinja2 templating language
+## Code is written in python using Flask micro framework, and jinja2 templating language
 Run the app.py
 This will activate a local server
 
