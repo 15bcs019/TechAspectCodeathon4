@@ -1,2 +1,0 @@
-# TechAspectCodeathon4
-placement
