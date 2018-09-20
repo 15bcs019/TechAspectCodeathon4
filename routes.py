@@ -11,23 +11,12 @@ def hello():
 def about():
     return 'Web Application'
 
-@app.route('/question/<title>', methods=['GET', 'POST'])
-def question(title):
+@app.route('/data/<title>', methods=['GET', 'POST'])
+def question(name):
     if request.method == 'GET':
-        question = r.get(title+':question')
-        return render_template('AnswerQuestion.html',
-                               question = question)
-    elif request.method == 'POST':
-        submittedAnswer = request.form['submittedAnswer'];
-
-        answer=r.get(title+':answer')
-
-        if submittedAnswer == answer:
-            return render_template('Correct.html');
-        else:
-            return render_template('Incorrect.html',
-                                   answer = answer,
-                                   submittedAnswer = submittedAnswer);
+        std_data = student[name]
+        return render_template('SeeData.html',
+                               std_data = std_data)
 
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
