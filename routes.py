@@ -12,12 +12,18 @@ def about():
     return 'Web Application'
 
 @app.route('/data/<title>', methods=['GET', 'POST'])
-def question(name):
+def data(name):
     if request.method == 'GET':
         std_data = student[name]
         return render_template('SeeData.html',
                                std_data = std_data)
-
+    
+    for 
+@app.route("/all",methods=['Get','POST'])
+def all():
+    pass
+#here we neeed to write logic to show all the enetered data
+    
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
     if request.method == 'GET':
@@ -30,7 +36,6 @@ def submit():
         semester = request.form['sem'];
         p_score = request.form['pa_score']
         student[name]= {age, branch, year,semester, p_score}
-
-       
         return render_template('dataSubmit.html',name = name)
+    
     return;
